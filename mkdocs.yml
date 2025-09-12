@@ -1,4 +1,4 @@
-site_name: How to Contribute
+site_name: ESIIL • How to Contribute
 #site_description: TODO: Uncomment and change to your site description Ex:'Analysis Modules for Environmental Data Science'
 #site_author: TODO: Uncomment and change to your site author(s) Ex: ESIIL CI team (lead = Ty Tuff)
 #site_url: TODO: Uncomment and change to your site url Ex: https://cu-esiil.github.io/analytics-library
@@ -14,13 +14,20 @@ copyright: 'Copyright &copy; 2023 University of Colorado Boulder'
 # Page tree
 nav:
   - Home: index.md
-  - Start contributing:
+  - Contributing:
+      - How to contribute: index.md           # <- this page (buttons only)
       - Contribute to OASIS: contribute-oasis.md
       - Contribute to the Data Library: contribute-data-library.md
       - Contribute to the Analytics Library: contribute-analytics-library.md
   # TODO: Add your nav sections / sub-sections and path to markdown page Ex:
   # - Remote Sensing:
   #     - How to Cloud Correct Sentinel-2 Images: remote_sensing/sentinel_2_cloud_correction/sentinel_2_cloud_correction.md
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 # Configuration
 theme:
@@ -62,13 +69,12 @@ extra:
       # link: # TODO: Uncomment and change to your github pages URL Ex: https://cu-esiil.github.io/analytics-library
 
 extra_css:
-  - stylesheets/extra.css
-  - assets/cta.css
+  - styles/cta.css
 
 plugins:
-    - search
-    - mkdocstrings
-    - git-revision-date
-    - mkdocs-jupyter:
-          include_source: True
-          ignore_h1_titles: True
+  - search
+  - mkdocstrings
+  - git-revision-date
+  - mkdocs-jupyter:
+        include_source: True
+        ignore_h1_titles: True
