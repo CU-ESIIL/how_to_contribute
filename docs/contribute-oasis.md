@@ -1,5 +1,8 @@
 # Contribute to OASIS (Org‑level docs)
 
+!!! note "What is OASIS?"
+    OASIS is our GitHub organization hub — a templating and navigation system for CI‑friendly research. It hosts the sites and templates that tie the ecosystem together.
+
 Use this when your contribution is **cross‑cutting**: Quickstarts, Containers, Resources, or site templates that help people navigate or bootstrap work.
 
 ## Scope examples

@@ -10,6 +10,8 @@
 5. **Citation** — how to cite dataset and creators.
 6. **Troubleshooting** — common errors, auth, CRS, etc.
 
+> **Reminder:** Every Data Library page must include one quick **raw-data plot** immediately after access, to show that the code worked.
+
 ## Author checklist
 - [ ] Streams/downloads from an authoritative source
 - [ ] One quick plot of the **raw** data to prove it works

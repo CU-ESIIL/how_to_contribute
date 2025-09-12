@@ -1,0 +1,29 @@
+.cta-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.25rem;
+}
+
+a.cta {
+  display: inline-block;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem); /* bigger than default */
+  font-weight: 700;
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  transition: transform .08s ease-out, box-shadow .12s ease-out;
+  box-shadow: 0 1px 0 rgba(0,0,0,.12);
+}
+
+a.cta.secondary {
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+}
+
+a.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+}

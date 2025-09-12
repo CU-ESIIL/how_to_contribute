@@ -1,4 +1,4 @@
-site_name: 'Your Site Name'
+site_name: How to Contribute
 #site_description: TODO: Uncomment and change to your site description Ex:'Analysis Modules for Environmental Data Science'
 #site_author: TODO: Uncomment and change to your site author(s) Ex: ESIIL CI team (lead = Ty Tuff)
 #site_url: TODO: Uncomment and change to your site url Ex: https://cu-esiil.github.io/analytics-library
@@ -14,7 +14,7 @@ copyright: 'Copyright &copy; 2023 University of Colorado Boulder'
 # Page tree
 nav:
   - Home: index.md
-  - Contributing:
+  - Start contributing:
       - Contribute to OASIS: contribute-oasis.md
       - Contribute to the Data Library: contribute-data-library.md
       - Contribute to the Analytics Library: contribute-analytics-library.md
@@ -33,14 +33,11 @@ theme:
   #favicon: # TODO: Uncomment and add path to your favicon .png Ex: 'assets/favicon.ico'
   # setting features for the navigation tab
   features:
+    - navigation.tabs
     - navigation.sections
     - navigation.instant
-    - navigation.tracking
-    - navigation.indexes
-    - navigation.top
-    - toc.integrate
-    - toc.follow
     - content.code.copy
+    - search.suggest
   # Default values, taken from mkdocs_theme.yml
   language: en
   palette:
@@ -66,6 +63,7 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+  - assets/cta.css
 
 plugins:
     - search
