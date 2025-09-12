@@ -2,6 +2,11 @@
 
 **Goal:** an **analysis pattern** that accepts generic data types and demonstrates the **inference** the method provides—**not** tied to a specific dataset.
 
+> **Keep it generic:** Avoid tying the method to a single named dataset. Accept **generic data types** and show how to adapt.
+
+!!! tip "Don’t skip interpretation"
+    Every result plot should include 2–3 sentences explaining **how to read the output** and **what inference** the method supports.
+
 ## Required sections
 1. **When to use** — questions the method answers; assumptions.
 2. **Inputs & assumptions** — generic data shapes/types; preconditions.
