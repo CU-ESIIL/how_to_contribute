@@ -1,21 +1,15 @@
----
-title: Welcome to the OASIS Contribution Guides
-description: Entry point for OASIS contributors and reviewers.
----
+# How to contribute
 
-# Welcome
+<!-- Three big CTAs; no other content -->
 
-Use this site to plan and submit contributions across the OASIS organization. Start with the overview, then choose the stream that matches your work.
+<div class="grid cards" markdown>
 
-## Contribution streams
-- [How to Contribute to OASIS](/how_to_contribute/)
-- [Data Library guide](/how_to_contribute/contribute-data-library/)
-- [Analytics Library guide](/how_to_contribute/contribute-analytics-library/)
-- [Templates & Documentation guide](/how_to_contribute/contribute-templates-docs/)
+-   :octicons-repo-16: **Contribute to OASIS**  
+    [Go to OASIS contribution guide](contribute-oasis/ "Org-level docs, templates, navigation"){ .md-button .md-button--primary }
 
-## Supporting resources
-- [Starter Kit](/how_to_contribute/starter-kit/)
-- [Controlled Vocabularies](/how_to_contribute/tag-vocab/)
-- [Recognition & Maintenance](/how_to_contribute/recognition/)
+-   :octicons-database-16: **Contribute to the Data Library**  
+    [Add a dataset page](contribute-data-library/ "Streaming code + quick plot + context"){ .md-button }
 
-Questions or ideas? Drop a note in the Lounge or join the next community call listed on `/events/`.
+-   :octicons-graph-16: **Contribute to the Analytics Library**  
+    [Add an analysis method page](contribute-analytics-library/ "Generic inputs + result plot + interpretation"){ .md-button }
+</div>
