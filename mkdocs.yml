@@ -14,11 +14,9 @@ copyright: 'Copyright &copy; 2023 University of Colorado Boulder'
 # Page tree
 nav:
   - Home: index.md
-  - Contributing:
-      - How to contribute: index.md           # <- this page (buttons only)
-      - Contribute to OASIS: contribute-oasis.md
-      - Contribute to the Data Library: contribute-data-library.md
-      - Contribute to the Analytics Library: contribute-analytics-library.md
+  - Contribute to OASIS: contribute-oasis.md
+  - Contribute to the Data Library: contribute-data-library.md
+  - Contribute to the Analytics Library: contribute-analytics-library.md
   # TODO: Add your nav sections / sub-sections and path to markdown page Ex:
   # - Remote Sensing:
   #     - How to Cloud Correct Sentinel-2 Images: remote_sensing/sentinel_2_cloud_correction/sentinel_2_cloud_correction.md
@@ -41,7 +39,6 @@ theme:
   favicon: assets/favicon.ico
   # setting features for the navigation tab
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.instant
     - content.code.copy
@@ -65,6 +62,7 @@ theme:
 
 # Options
 extra:
+  homepage: https://cu-esiil.github.io/home/
   social:
     - icon: fontawesome/brands/github
       # link: # TODO: Uncomment and change to your github pages URL Ex: https://cu-esiil.github.io/analytics-library
