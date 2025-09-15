@@ -14,14 +14,9 @@ copyright: 'Copyright &copy; 2023 University of Colorado Boulder'
 # Page tree
 nav:
   - Home: index.md
-  - Contribute:
-      - Overview: how_to_contribute/index.md
-      - Templates & Documentation: how_to_contribute/contribute-templates-docs.md
-      - Data Library: how_to_contribute/contribute-data-library.md
-      - Analytics Library: how_to_contribute/contribute-analytics-library.md
-      - Controlled Vocabularies: how_to_contribute/tag-vocab.md
-      - Starter Kit: how_to_contribute/starter-kit.md
-      - Recognition & Maintenance: how_to_contribute/recognition.md
+  - Contribute to OASIS: contribute-oasis.md
+  - Contribute to the Data Library: contribute-data-library.md
+  - Contribute to the Analytics Library: contribute-analytics-library.md
   # TODO: Add your nav sections / sub-sections and path to markdown page Ex:
   # - Remote Sensing:
   #     - How to Cloud Correct Sentinel-2 Images: remote_sensing/sentinel_2_cloud_correction/sentinel_2_cloud_correction.md
