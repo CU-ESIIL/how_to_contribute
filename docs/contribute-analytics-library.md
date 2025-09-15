@@ -1,40 +1,149 @@
-# Contribute to the Analytics Library
+# How to Contribute to the OASIS Analytics Library
 
-**Goal:** an **analysis pattern** that accepts generic data types and demonstrates the **inference** the method provides—**not** tied to a specific dataset.
+The OASIS Analytics Library is a collection of **copy-and-paste ready code snippets** for common analytics methods. These snippets are designed to be:
 
-> **Keep it generic:** Avoid tying the method to a single named dataset. Accept **generic data types** and show how to adapt.
+* **Generic**: methods that work with common data types (numeric, categorical, temporal, spatial).
+* **Minimal**: no unnecessary dependencies, runnable with simple imports.
+* **Educational**: code is clear, commented, and easy to adapt.
 
-!!! tip "Don’t skip interpretation"
-    Every result plot should include 2–3 sentences explaining **how to read the output** and **what inference** the method supports.
+Contributors are usually:
 
-## Required sections
-1. **When to use** — questions the method answers; assumptions.
-2. **Inputs & assumptions** — generic data shapes/types; preconditions.
-3. **Step‑by‑step** (R/Python) — minimal, runnable example.
-4. **Result plot + interpretation** — show output **and explain how to read it**.
-5. **Settings & sensitivity** — how parameters change outcomes; defaults to start with.
-6. **Pitfalls & limitations** — where it fails; what to avoid; checks to run.
+* **Data managers** who want to provide accessible analytics methods alongside datasets.
+* **Heavy users** (e.g. postdocs, analysts) who rely on methods and want to share tested workflows with others.
 
-## Author checklist
-- [ ] Works on **generic** data types (not fixed to one dataset)
-- [ ] Produces a result plot **with interpretation guidance**
-- [ ] Explains parameters/settings and their effects
-- [ ] Notes pitfalls/limitations and when to avoid the method
-- [ ] License and links set; assets < 2 MB; alt text present
+---
 
-## Style guide (authoritative)
-Follow the Analytics Library style rules:  
-https://github.com/CU-ESIIL/analytics-library/blob/main/docs/style-guide.md
+## Structure of the Analytics Library
 
-## Tiny example (placeholder)
+* Each analytics method has its own `.md` file in `/analytics-library/`.
+* Snippets are organized by tags (numeric, categorical, temporal, spatial, visualization, etc.).
+* Code is embedded directly in the Markdown file.
+* Snippets may include optional output images or plots, stored in `/images/`.
+
+---
+
+## Standard Entry Template
+
+Each entry must follow this format:
+
+````markdown
+---
+title: Correlation Heatmap
+author: Jane Doe
+date: 2025-09-15
+tags: [numeric, visualization, correlation]
+dependencies: [pandas, seaborn]
+description: Given a DataFrame of numeric variables, plot pairwise correlations as a heatmap.
+---
+
+# Correlation Heatmap
+
+## Example Code
 ```python
-# Python
-# yhat, diag = fit_and_predict(x, params)
-# plt.plot(t, y, label="obs"); plt.plot(t, yhat, label="fit"); plt.legend()
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Assume `df` is a pandas DataFrame with numeric columns
+corr = df.corr()
+sns.heatmap(corr, annot=True, fmt=".2f", cmap="coolwarm")
+plt.title("Correlation Heatmap")
+plt.show()
+````
+
+## Notes
+
+* Requires `pandas` and `seaborn`.
+* Works only with numeric columns; drop categorical variables beforehand.
+* NaN handling follows pandas defaults.
+
+````
+
+---
+
+## Author Guidelines
+
+- **File naming**: use kebab-case, e.g. `correlation-heatmap.md`.
+- **Front matter**: include `title`, `author`, `date`, `tags`, `dependencies`, and `description`.
+- **Code blocks**: must run as-is; include all imports.
+- **Variables**: use generic names like `df` or `data`, not dataset-specific ones.
+- **Dependencies**: keep minimal and document explicitly.
+- **Plots**: include one simple plot when relevant; store images in `/images/`.
+- **Tags**: choose from controlled vocabulary: `numeric`, `categorical`, `temporal`, `spatial`, `visualization`, `transformation`, `grouping`, `missing-data`.
+- **Style**: write in plain, clear language; keep sentences short and imperative.
+
+---
+
+## Naming Conventions
+
+- Files: kebab-case (`time-series-smoothing.md`).
+- Images: `method-shortdescription.png`.
+- Branches: `analytics/new-method` or `fix/update-snippet`.
+- Commits: `feat(analytics): add correlation heatmap snippet`.
+
+---
+
+## Submission Process
+
+1. Fork the repository.
+2. Create a branch using the naming convention.
+3. Add your `.md` file under `/analytics-library/`.
+4. Add any plots/images under `/analytics-library/images/`.
+5. Test the code locally to ensure it runs as written.
+6. Open a Pull Request with a clear title and summary.
+
+---
+
+## Review Standards
+
+- Code must run as provided with no missing imports.
+- Snippets must be generic (no dataset-specific column names).
+- Metadata fields must be complete.
+- Tags must follow the controlled vocabulary.
+- Dependencies must be minimal and documented.
+- Output plots (if included) must render and match the code.
+
+---
+
+## Example Contribution
+
+```markdown
+---
+title: Frequency Table of Categorical Variable
+author: John Smith
+date: 2025-09-15
+tags: [categorical, summary]
+dependencies: [pandas]
+description: Count the frequency of each category in a DataFrame column.
+---
+
+# Frequency Table of Categorical Variable
+
+## Example Code
+```python
+import pandas as pd
+
+# Assume `df` is a pandas DataFrame with a categorical column `species`
+counts = df['species'].value_counts()
+print(counts)
+````
+
+## Notes
+
+* Works with any categorical column.
+* Use `.plot.bar()` on the counts to create a bar chart if desired.
+
 ```
 
-```r
-# R
-# fit <- method(x, params)
-# plot_result(fit)  # include a short paragraph interpreting the figure
+---
+
+## Maintenance
+
+- Automated checks will test snippets against toy data structures.
+- Contributors are expected to update entries if dependencies or APIs change.
+- Outdated entries may be archived but can be revived with updates.
+
+---
+
+*Simple, generic, and runnable snippets are what make the Analytics Library useful. Thanks for contributing carefully.*
+
 ```
