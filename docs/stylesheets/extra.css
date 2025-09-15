@@ -1,1 +1,14 @@
 /* extra styles placeholder */
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.cta-buttons .md-button {
+  flex: 1 1 12rem;
+  text-align: center;
+}
